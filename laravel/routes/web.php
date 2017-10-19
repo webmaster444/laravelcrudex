@@ -69,10 +69,21 @@ Route::get('json',function(){
    return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gujarat']);
 });
 
-Route::get('/test', function(){
-   return view('test',['name'=>'Virat Gandhi']);
-});
+// Route::get('/test', function(){
+//    return view('test',['name'=>'Virat Gandhi']);
+// });
 
 Route::get('blade', function () {
    return view('page',array('name' => 'Virat'));
+});
+Route::get('/test', ['as'=>'testing',function(){
+   return view('test2');
+}]);
+Route::get('redirect',function(){
+   return redirect()->route('testing');
+});
+
+Route::get('rr','RedirectController@index');
+Route::get('/redirectcontroller',function(){
+   return redirect()->action('RedirectController@index');
 });
