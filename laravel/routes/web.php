@@ -68,3 +68,11 @@ Route::get('/cookie/get','CookieController@getCookie');
 Route::get('json',function(){
    return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gujarat']);
 });
+
+Route::get('/test', function(){
+   return view('test',['name'=>'Virat Gandhi']);
+});
+
+Route::get('blade', function () {
+   return view('page',array('name' => 'Virat'));
+});
