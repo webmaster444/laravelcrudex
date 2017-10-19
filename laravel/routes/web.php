@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('/hi', function () {
     return view('welcome1');
 });
+
+Route::get('ID/{id}',function($id){
+   echo 'ID: '.$id;
+});
+
+Route::get('/user/{name?}',function($name = 'Virat'){
+   echo "Name: ".$name;
+});
