@@ -59,5 +59,6 @@ class Kernel extends HttpKernel
         'Age' => \App\Http\Middleware\AgeMiddleware::class,
         'Role' => \crudapp\Http\Middleware\RoleMiddleware::class,
         'Terminate' => \crudapp\Http\Middleware\TerminateMiddleware::class,
+        'Second' => \crudapp\Http\Middleware\SecondMiddleware::class,
     ];
 }

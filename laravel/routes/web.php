@@ -36,3 +36,21 @@ Route::get('terminate',[
    'middleware' => 'Terminate',
    'uses' => 'ABCController@index',
 ]);
+
+Route::get('profile', [
+   'middleware' => 'auth',
+   'uses' => 'UserController@showProfile'
+]);
+
+Route::get('/usercontroller/path',[
+   'middleware' => 'Second',
+   'uses' => 'UserController@showPath'
+]);
+
+Route::resource('my','MyController');
+// Route::controller('test','ImplicitController');
+
+class MyClass{
+   public $foo = 'bar';
+}
+Route::get('/myclass','ImplicitController@index');
