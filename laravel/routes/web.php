@@ -26,3 +26,13 @@ Route::get('ID/{id}',function($id){
 Route::get('/user/{name?}',function($name = 'Virat'){
    echo "Name: ".$name;
 });
+
+Route::get('role',[
+   'middleware' => 'Role:editor',
+   'uses' => 'TestController@index',
+]);
+
+Route::get('terminate',[
+   'middleware' => 'Terminate',
+   'uses' => 'ABCController@index',
+]);
