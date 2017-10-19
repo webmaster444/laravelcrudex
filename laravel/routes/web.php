@@ -64,3 +64,7 @@ Route::post('/user/register',array('uses'=>'UserRegistration@postRegister'));
 
 Route::get('/cookie/set','CookieController@setCookie');
 Route::get('/cookie/get','CookieController@getCookie');
+
+Route::get('json',function(){
+   return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gujarat']);
+});
