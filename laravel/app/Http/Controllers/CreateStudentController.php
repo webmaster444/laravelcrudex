@@ -14,8 +14,7 @@ class CreateStudentController extends Controller
       $name = $request->input('stud_name');
       DB::insert('insert into student (name) values(?)',[$name]);
       echo "Record inserted successfully.<br/>";
-      echo '<a href = "/event">Click Here</a> to go back.';
-      
+      echo '<a href = "/event">Click Here</a> to go back.';      
       //firing an event
       Event::fire(new StudentAdded($name));
    }
