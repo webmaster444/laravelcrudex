@@ -87,3 +87,6 @@ Route::get('rr','RedirectController@index');
 Route::get('/redirectcontroller',function(){
    return redirect()->action('RedirectController@index');
 });
+
+Route::get('insert','StudInsertController@insertform');
+Route::post('create','StudInsertController@insert');
