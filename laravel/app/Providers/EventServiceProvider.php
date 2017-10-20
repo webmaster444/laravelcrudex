@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'crudapp\Events\Event' => [
             'crudapp\Listeners\EventListener',
         ],
+        'crudapp\Events\StudentAdded' =>[
+            'crudapp\Listeners\StudentAddedListener',
+        ]
     ];
 
     /**

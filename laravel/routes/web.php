@@ -115,3 +115,6 @@ Route::post('/getmsg','AjaxController@index');
 Route::get('/error',function(){
    abort(404);
 });
+
+Route::get('event','CreateStudentController@insertform');
+Route::post('addstudent','CreateStudentController@insert');
