@@ -94,3 +94,5 @@ Route::post('create','StudInsertController@insert');
 Route::get('/form',function(){
    return view('form');
 });
+
+Route::get('localization/{locale}','LocalizationController@index');
