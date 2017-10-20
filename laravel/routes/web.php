@@ -118,3 +118,7 @@ Route::get('/error',function(){
 
 Route::get('event','CreateStudentController@insertform');
 Route::post('addstudent','CreateStudentController@insert');
+
+Route::get('/facadeex', function(){
+   return TestFacades::testingFacades();
+});

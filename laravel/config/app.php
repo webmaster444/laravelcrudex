@@ -177,7 +177,7 @@ return [
         // crudapp\Providers\BroadcastServiceProvider::class,
         crudapp\Providers\EventServiceProvider::class,
         crudapp\Providers\RouteServiceProvider::class,
-
+        crudapp\Providers\TestFacadesServiceProvider::class,
     ],
 
     /*
@@ -225,7 +225,8 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View' => Illuminate\Support\Facades\View::class,        
+        'View' => Illuminate\Support\Facades\View::class,   
+        'TestFacades'=>crudapp\Test\Facades\TestFacades::class,     
         // 'Html' => Collective\Html\HtmlFacade::Class,
         // 'Form' => Collective\Html\FormFacade::Class,
     ],
