@@ -111,3 +111,7 @@ Route::get('ajax',function(){
    return view('message');
 });
 Route::post('/getmsg','AjaxController@index');
+
+Route::get('/error',function(){
+   abort(404);
+});
