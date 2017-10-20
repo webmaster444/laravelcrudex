@@ -50,9 +50,6 @@ Route::get('/usercontroller/path',[
 Route::resource('my','MyController');
 // Route::controller('test','ImplicitController');
 
-class MyClass{
-   public $foo = 'bar';
-}
 Route::get('/myclass','ImplicitController@index');
 
 Route::get('/foo/bar','UriController@index');
@@ -105,3 +102,7 @@ Route::get('/validation','ValidationController@showform');
 Route::post('/validation','ValidationController@validateform');
 Route::get('/uploadfile','UploadFileController@index');
 Route::post('/uploadfile','UploadFileController@showUploadFile');
+
+Route::get('sendbasicemail','MailController@basic_email');
+Route::get('sendhtmlemail','MailController@html_email');
+Route::get('sendattachmentemail','MailController@attachment_email');
