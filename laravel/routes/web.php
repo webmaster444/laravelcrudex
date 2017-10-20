@@ -90,3 +90,7 @@ Route::get('/redirectcontroller',function(){
 
 Route::get('insert','StudInsertController@insertform');
 Route::post('create','StudInsertController@insert');
+
+Route::get('/form',function(){
+   return view('form');
+});
